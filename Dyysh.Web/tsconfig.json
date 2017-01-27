@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5"
+  },
+  "compileOnSave": true,
+  "include": [
+    "wwwroot/script/**/*" 
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

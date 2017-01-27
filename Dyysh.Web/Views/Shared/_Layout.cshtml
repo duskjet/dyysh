@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!--Либы хуибы-->
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/knockoutjs/dist/knockout.js"></script>*@
+
+    <!--Хуе мое-->
+    <script src="~/script/bundle.js"></script>
+    @*<script src="~/script/main.js"></script>*@
+
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>
+            Hello from
+            <strong data-bind="text: language">todo</strong>
+            and
+            <strong data-bind="text: framework">todo</strong>!
+        </p>
+
+        <p>Language: <input data-bind="textInput: language" /></p>
+        <p>Framework: <input data-bind="textInput: framework" /></p>
+        @RenderBody()
+    </div>
+</body>
+</html>

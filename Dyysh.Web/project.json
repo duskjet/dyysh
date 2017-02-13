@@ -14,15 +14,18 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
+    "Microsoft.AspNetCore.Razor.Runtime": "1.0.1",
     "Microsoft.AspNetCore.StaticFiles": "1.0.1",
     "Microsoft.AspNetCore.Routing": "1.0.1",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
     "Microsoft.AspNetCore.Session": "1.0.1",
-    "Microsoft.AspNetCore.Authentication.Cookies": "1.0.1"
+    "Microsoft.AspNetCore.Authentication.Cookies": "1.0.1",
+    "Microsoft.AspNetCore.DataProtection.Redis": "0.1.0"
   },
 
   "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final",
+    "Microsoft.AspNetCore.Razor.Tools": "1.0.0-preview2-final"
   },
 
   "frameworks": {
@@ -36,7 +39,8 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "define": []
   },
 
   "runtimeOptions": {

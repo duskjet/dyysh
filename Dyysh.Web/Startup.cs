@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
+using Dyysh.Web.Middleware;
 
 namespace Dyysh.Web
 {
@@ -35,8 +38,16 @@ namespace Dyysh.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseUserAgentRejection(exclusion: "trident");
+
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files
             app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(@"D:\images\"),
+                RequestPath = new PathString("/images")
+            });
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions()
             {

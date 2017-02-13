@@ -20,7 +20,7 @@ namespace Dyysh.Web.Controllers
         public async Task<IActionResult> Login(string username, string password)
         {
             await HttpContext.Authentication.SignInAsync("MyCookieMiddlewareInstance", HttpContext.User);
-            HttpContext.Session.Set("username", System.Text.Encoding.Unicode.GetBytes("pidor"));
+            HttpContext.Session.Set("username", System.Text.Encoding.ASCII.GetBytes($"{username} pidor"));
 
             return RedirectToAction("Index", "Home");
         }

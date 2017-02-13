@@ -1,3 +1,14 @@
-﻿@{
+﻿@*@{
     Layout = "_Layout";
-}
+}*@
+@model AccountViewModels.Login
+
+<form asp-antiforgery="true" asp-controller="account" asp-action="login" method="post">
+    <label asp-for="Username">ebalo</label>
+    <input asp-for="Username" />
+
+    <label asp-for="Password">doska</label>
+    <input asp-for="Password" />
+
+    <input type="submit" value="Vpered" />
+</form>

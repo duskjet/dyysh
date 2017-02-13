@@ -1,5 +1,10 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
-  background: #84009e;
+  background: #68007d;
   background: -moz-linear-gradient(70deg, #68007d 0%, #6f00ff 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #68007d), color-stop(100%, #6f00ff));
   background: -webkit-linear-gradient(70deg, #68007d 0%, #6f00ff 100%);
@@ -7,4 +12,21 @@ body {
   background: -ms-linear-gradient(70deg, #68007d 0%, #6f00ff 100%);
   background: linear-gradient(70deg, #68007d 0%, #6f00ff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68007d', endColorstr='#6f00ff', GradientType=1);
+}
+.gallery .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: aqua solid 1px;
+  padding: 10px;
+  float: left;
+  margin: 2px;
+}
+.gallery .image img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
 }

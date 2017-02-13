@@ -31,6 +31,9 @@ namespace Dyysh.Web.Controllers
             }
             public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
             {
+                byte[] username;
+                context.HttpContext.Session.TryGetValue("username", out username);
+
                 await next();
             }
         }

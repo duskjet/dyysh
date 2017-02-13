@@ -1,3 +1,10 @@
-﻿@{
+﻿@model IEnumerable<ImageViewModel>
 
-}
+<div class="gallery">
+    @foreach (var img in Model)
+    {
+        <div class="image">
+            <image src="@img.Thumbnail" origin="@img.Origin" info="@img.ImageInfo" />
+        </div>
+    }
+</div>
